@@ -1,0 +1,7 @@
+interface:
+  display_name: "Resume Work"
+  short_description: "Continue bounded work with durable checkpoints"
+  default_prompt: "Use $resume-work to continue this authorized task in bounded runs."
+
+policy:
+  allow_implicit_invocation: false
