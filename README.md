@@ -2,12 +2,12 @@
 
 Maintained translation of pstack into a ChatGPT plugin.
 
-This repository contains the ChatGPT adaptation of [Lauren Tan’s pstack](https://github.com/cursor/plugins/tree/main/pstack). The plugin source is in `pstack/`, currently version **0.16.2**, with 66 skills covering engineering investigation, adversarial review, verification, writing, and native agent workflows.
+This repository contains the ChatGPT adaptation of [Lauren Tan’s pstack](https://github.com/cursor/plugins/tree/main/pstack). The plugin source is in `pstack/`, currently version **0.16.3**, with 66 skills covering engineering investigation, adversarial review, verification, writing, and native agent workflows.
 
 ## Install your own copy
 
 1. Download or clone this repository.
-2. From its root, run `python tools/package.py` with Python 3. This creates `dist/pstack-0.16.2.zip`.
+2. From its root, run `python tools/package.py` with Python 3. This creates `dist/pstack-0.16.3.zip`.
 3. Attach that ZIP in ChatGPT with Plugin Creator selected and ask: “Create a private plugin from this package.” Plugin Creator must be available in your account.
 4. Select the resulting plugin and ask to use `setup-pstack`, `poteto-mode`, `interrogate`, or `unslop`.
 

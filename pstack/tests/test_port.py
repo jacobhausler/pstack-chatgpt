@@ -10,7 +10,7 @@ class PortTests(unittest.TestCase):
   for p in (ROOT/'automations').rglob('*.md'):self.assertNotIn('SKILL.md',p.read_text())
   for p in (ROOT/'skills/poteto-mode').rglob('*.md'):self.assertNotIn('/deslop',p.read_text())
   for p in [ROOT/'plugin.json',ROOT/'.codex-plugin/plugin.json']:
-   self.assertEqual(json.loads(p.read_text())['version'],'0.16.2')
+   self.assertEqual(json.loads(p.read_text())['version'],'0.16.3')
  def test_cleanup(self):
   with tempfile.TemporaryDirectory() as temp:
    d=pathlib.Path(temp); repo=d/'repo';repo.mkdir();bindir=d/'bin';bindir.mkdir()

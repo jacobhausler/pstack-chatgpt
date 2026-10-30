@@ -9,7 +9,7 @@
     "shortDescription": "Rigorous engineering workflows"
   },
   "name": "pstack",
-  "version": "0.16.2",
+  "version": "0.16.3",
   "description": "Engineering workflows for investigation, code review, verification, and technical writing.",
   "author": {
     "name": "Jacob Hausler",

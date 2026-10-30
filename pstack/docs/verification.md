@@ -31,3 +31,10 @@ Executed five Python package/cleanup tests, 61 Bun watcher/plan tests, watcher s
 Adversarial instruction review covered missing video rendering, unsupported model choices, changed PR heads, worker claims of approval, interrupted checkpoints and overlapping writes. Resulting instructions fall back to text, preserve user authorization, and reconcile current state before mutation. These are instruction checks, not live-service enforcement tests.
 
 The upstream statechart replacement was separately attempted with Node 22.18.0 and --test-concurrency=1. Ninety-two tests passed before exit 137 terminated the process; no completed suite result was obtained. It was not shipped. The pending path and its old baseline are recorded in upstream-sync.json so later runs retry it even when no new upstream commit exists. No live GitHub/Slack monitors or external messages were created.
+
+
+## 2026-10-30 update, release 0.16.3
+
+Completed the statechart compiler migration from upstream commit 4dd1d05818d19792e7cd6e818f1667f95f7e1dbe. The migration retains the ChatGPT adapter and explicit-only invocation policy, and omits the upstream-only disable-model-invocation field. The previous pending migration entry is resolved.
+
+Validation used Node 22.18.0 and official TLA+ tools v1.7.4 (TLC 2.19, revision 5a47802). The complete sequential statechart suite reported 365 passed and 2 failed; both failures were signal tests whose fixture queried an unavailable PID through `ps`. After replacing the fixture with a marker containing the directly spawned CLI PID, the full CLI file passed all 126 tests, including both signal cases. The other 241 assertions passed in the full-suite run. This combines complete coverage across the two invocations; the one-shot full-suite invocation was not rerun after the fixture correction.
