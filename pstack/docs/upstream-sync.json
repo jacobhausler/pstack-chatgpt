@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-10-30",
+  "upstream_repository": "cursor/plugins",
+  "upstream_path": "pstack",
+  "original_baseline": "8b3326d99fd4b993cb33a24dad8af03175c642c5",
+  "last_reviewed_commit": "4dd1d05818d19792e7cd6e818f1667f95f7e1dbe",
+  "last_incorporated_commit": "4dd1d05818d19792e7cd6e818f1667f95f7e1dbe",
+  "upstream_version": "0.15.36",
+  "plugin_version": "0.16.2",
+  "integration": "partial; component exceptions below must be reconsidered on the next run",
+  "pending": [
+    {
+      "path": "skills/statechart",
+      "base_commit": "8b3326d99fd4b993cb33a24dad8af03175c642c5",
+      "target_commit": "4dd1d05818d19792e7cd6e818f1667f95f7e1dbe",
+      "reason": "Node 22.18.0 sequential suite passed 92 tests then exit 137 before completion; retain prior implementation until verified."
+    }
+  ],
+  "adaptation_decisions": [
+    "Retained bundled interrogate and its review references; upstream now requires external review unavailable as a portable dependency.",
+    "Preserved native models, tools, invocation policies, checkpoints and exact-head review rules in place of Cursor defaults.",
+    "Worktree upstream date/stat patch only affects removed Cursor transcript mining; existing safe native worktree audit unchanged.",
+    "Removed retired orch CLI and replaced its playbook with native coordination and durable resume-work guidance.",
+    "Did not import Cursor-specific guide or model setup instructions; native guide retained."
+  ]
+}

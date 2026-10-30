@@ -38,6 +38,8 @@ Pick the tool that answers the question at the lowest cost: a model checker, a p
 
 For a reusable ChatGPT skill, follow the host skill-creator workflow and validate its supported metadata. A repository-local guide can document the area and when to use it, but writing frontmatter does not register it as a ChatGPT skill. From the skill alone, the next agent must be able to tell whether a change touches the verified code, run the check, tell a real bug from a modeling error, and update the verification when a change is intended. Put the coverage record and the sync commit in the skill, and tell the next agent to move the sync commit forward only after it confirms that the verification describes the code at the new commit. Use this repo's real commands, paths, and nouns, and leave no placeholders.
 
+If the check is a TLA+ model, tell the next agent to read every result with the pstack **statechart** skill. It presents invariant violations as shortest paths in plain words and charts the state transitions when checks pass. Refer to the skill by name; do not copy its commands or paths into the generated skill because those can change by host and release.
+
 ## Prove it before you hand off
 
 Follow the generated skill once, as the next agent would, on a scratch change that breaks the property in the real code. It must catch the break. Then drop the scratch change and confirm that the check is back where it started: passing, or failing only on the findings you will report. A verify skill that was never run is a draft. If the skill misses the break or a step does not run, fix the skill or the verification, not the scratch change.

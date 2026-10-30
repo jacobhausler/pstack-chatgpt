@@ -2,15 +2,15 @@ import json,os,pathlib,subprocess,tempfile,unittest,yaml
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 class PortTests(unittest.TestCase):
  def test_package(self):
-  skills=list(ROOT.glob('skills/*/SKILL.md'));self.assertEqual(len(skills),65)
-  self.assertEqual(len(list(ROOT.rglob('SKILL.md'))),65)
+  skills=list(ROOT.glob('skills/*/SKILL.md'));self.assertEqual(len(skills),66)
+  self.assertEqual(len(list(ROOT.rglob('SKILL.md'))),66)
   for p in skills:
    meta=yaml.safe_load(p.read_text().split('---',2)[1]);self.assertEqual(meta['name'],p.parent.name)
    self.assertEqual((p.parent/'references/chatgpt.md').read_text(),(ROOT/'docs/harness/chatgpt.md').read_text())
   for p in (ROOT/'automations').rglob('*.md'):self.assertNotIn('SKILL.md',p.read_text())
   for p in (ROOT/'skills/poteto-mode').rglob('*.md'):self.assertNotIn('/deslop',p.read_text())
   for p in [ROOT/'plugin.json',ROOT/'.codex-plugin/plugin.json']:
-   self.assertEqual(json.loads(p.read_text())['version'],'0.16.1')
+   self.assertEqual(json.loads(p.read_text())['version'],'0.16.2')
  def test_cleanup(self):
   with tempfile.TemporaryDirectory() as temp:
    d=pathlib.Path(temp); repo=d/'repo';repo.mkdir();bindir=d/'bin';bindir.mkdir()

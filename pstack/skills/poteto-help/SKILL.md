@@ -22,6 +22,7 @@ Use setup-pstack to inspect the available tools and model choices. Roles use the
 | --- | --- |
 | Carry out an engineering task | poteto-mode |
 | Understand implementation or its rationale | how or why |
+| Catch up on this chat as a short subtitled slide video when supported | ketchup-video |
 | Challenge a change | interrogate |
 | Design types and module boundaries | architect |
 | Compare alternatives or divide work | arena or swarm |

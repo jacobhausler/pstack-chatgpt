@@ -44,7 +44,7 @@ Swap in the real paths, skills, and done checks. Informal wording works.
 
 - `poteto-mode, I'm going to bed. <goal> in a fresh worktree off <base>. Done means <checks>. Keep a decision log. Don't ask me before committing. Use resume-work to continue until done. If you're truly stuck after a few hours, stop and write up why.`
 - `/show-me-your-work catch me up on what you did last night.` Read its Attention section first.
-- `/ketchup` catches you up on this chat since your last message and lists every call that waits on you.
+- `/ketchup` catches you up on this chat since your last message and lists every call that waits on you. Use `/ketchup-video` for the same catch-up as a subtitled slide video when the session can create and inspect one.
 - `/poteto-mode full autopilot on this queue. each item is independent.`
 - `/poteto-mode autopilot these changes but stack them, don't ship. i'll land the stack.`
 - `/reflect capture what we learned so the next run doesn't repeat it.` Approve only edits that change a future decision.

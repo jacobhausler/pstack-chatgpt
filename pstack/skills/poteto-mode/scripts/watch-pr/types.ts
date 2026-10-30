@@ -52,6 +52,7 @@ export interface PullRequestFacts {
 }
 export interface OpenPullRequest {
   readonly number: PrNumber;
+  readonly isCrossRepository: boolean;
   readonly headRefName: string;
   readonly baseRefName: string;
 }
@@ -411,4 +412,3 @@ export interface PollingOptions {
   readonly maxQueryErrors: number;
   readonly allowDraft: boolean;
 }
-

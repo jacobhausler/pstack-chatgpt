@@ -48,6 +48,8 @@ Present the synthesizer's Accepted / Rejected / Backlog output. Apply only chang
 
 File Backlog items only when the user explicitly authorized the destination and the connected tracker is available. Otherwise include them in the report without creating external records.
 
+Do not edit a skill inside an installed plugin or cache. Before proposing a change, identify the owning source repository or skill source and show that destination. Edit only that supported source under the user's authorization; if it is unavailable, provide a proposed patch instead. Do not publish, push, or open a PR unless explicitly requested.
+
 Follow each approved row's Routing exactly:
 
 - Trivial existing-skill edit (a one-line bullet, a tightened sentence, a stale fact corrected): the parent does it directly.

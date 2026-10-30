@@ -21,3 +21,13 @@ The user selected local tests only. No live repository, Slack channel, tracker d
 The existing weekly pstack updater remains scheduled for Fridays around 9 a.m. America/Chicago. Its updated prompt preserves native workflows, invocation policies, adapter copies, cleanup and retry protections, and runs regression checks before guarded updates. A future scheduled run has not yet been observed.
 
 The user's Luna delegation preference applied to this maintenance task. Other tasks continue to inherit the parent model unless the user requests supported model choices. Repository guidance and global preferences were not changed.
+
+## 2026-10-30 update, release 0.16.2
+
+Verified all 322 saved source files against the integration baseline before editing. All nine native workflows remain byte-identical. The package now has 66 skills, with ketchup-video explicit-only and its own adapter reference.
+
+Executed five Python package/cleanup tests, 61 Bun watcher/plan tests, watcher strict TypeScript checking, and the retained statechart suite (29 passed, 38 skipped because TLC is unavailable). All executed tests passed. Watcher regressions cover fork branch collisions, cycle termination, and deadline-capped sleeps. Markdown local-reference checks passed.
+
+Adversarial instruction review covered missing video rendering, unsupported model choices, changed PR heads, worker claims of approval, interrupted checkpoints and overlapping writes. Resulting instructions fall back to text, preserve user authorization, and reconcile current state before mutation. These are instruction checks, not live-service enforcement tests.
+
+The upstream statechart replacement was separately attempted with Node 22.18.0 and --test-concurrency=1. Ninety-two tests passed before exit 137 terminated the process; no completed suite result was obtained. It was not shipped. The pending path and its old baseline are recorded in upstream-sync.json so later runs retry it even when no new upstream commit exists. No live GitHub/Slack monitors or external messages were created.
